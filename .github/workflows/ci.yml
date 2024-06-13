@@ -27,8 +27,8 @@ jobs:
 
       - name: Construir e enviar imagem Docker
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          buildah login -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }} ghcr.io
+          buildah login -u ${{ github.actor }} -p ${{ secrets.GH_TOKEN }} ghcr.io
           buildah bud -t ${{ env.DOCKER_IMAGE_NAME }}:latest .
           buildah push ${{ env.DOCKER_IMAGE_NAME }}:latest
