@@ -14,7 +14,7 @@ env:
 
 jobs:
   build_and_push:
-    runs-on: ${{ secrets.GITHUB_RUNNER_NAME }}
+    runs-on: ${{ secrets.RUNNER_NAME }}
 
     steps:
       - name: Checkout repository
