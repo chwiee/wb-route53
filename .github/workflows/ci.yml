@@ -14,7 +14,7 @@ env:
 
 jobs:
   build_and_push:
-    runs-on: ${{ secrets.RUNNER_NAME }}
+    runs-on: wb.homelab
 
     steps:
       - name: Checkout repository
